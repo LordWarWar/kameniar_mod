@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  buildx:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,5 +22,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: ghcr.io/lordwarwar/kameniar_mod:latest
-    #permissions:
-    #  packages: read
+    permissions:
+      packages: read
