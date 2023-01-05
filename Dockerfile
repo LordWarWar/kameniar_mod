@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 WORKDIR /root/
 
 RUN apt update && apt -y upgrade
-RUN apt install -y curl tmux sudo python3 python3-pip locales ip
+RUN apt install -y curl tmux sudo python3 python3-pip locales iproute2
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY mdu.sh /root/
